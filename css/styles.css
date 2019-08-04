@@ -1,9 +1,60 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+#header, #form-add-note {
+    margin-bottom: 20px;
 }
-/* Muito pequeno */
+
+#content {
+    padding-bottom: 20px;
+}
+
+#notes ul, #notes li {
+    list-style: none;
+}
+
+#notes li {
+    cursor: pointer;
+    padding: 10px;
+}
+
+#notes li:hover {
+    background-color: #607d8b;
+    color: #fff;
+}
+
+* {
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding: 20px;
+}
+
+h1, p {
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+p {
+    font-size: 1em;
+}
+
+input {
+    font: inherit;
+    padding: 10px 20px;
+}
+
+/** Muito pequeno **/
 .container {
-    background-color: blue;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -11,30 +62,42 @@
     padding-right: 20px;
 }
 
-/* Pequeno */
+.row {
+    display: flex;
+}
+
+.col-1 {
+    flex-grow: 1;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+/** Pequeno **/
 @media (min-width: 576px) {
     .container {
-        max-width:540px;
+        max-width: 540px;
     }
-} 
+}
 
-/* Médio */
+/** Medio **/
 @media (min-width: 768px) {
     .container {
-        max-width:720px;
+        max-width: 720px;
     }
-} 
+}
 
-/* Grande */
+/** Grande **/
 @media (min-width: 992px) {
     .container {
-        max-width:960px;
+        max-width: 960px;
     }
-} 
+}
 
-/* A partir de 1200px */
+/** Muito grande **/
 @media (min-width: 1200px) {
     .container {
-        max-width:1040px;
+        max-width: 1140px;
     }
-} 
+}
