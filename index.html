@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <base href="/pwa-test/">
     <meta charset="UTF-8">
@@ -12,9 +13,31 @@
 
     <link rel="manifest" href="manifest.json">
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDouY_gmrIzKHD7F6vG3HER_uQzlJTTHsE",
+            authDomain: "pwa-test-ef49c.firebaseapp.com",
+            databaseURL: "https://pwa-test-ef49c.firebaseio.com",
+            projectId: "pwa-test-ef49c",
+            storageBucket: "",
+            messagingSenderId: "486235602949",
+            appId: "1:486235602949:web:989af9c00ca371d3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
     <script src="js/object.observe.polyfill.js"></script>
     <script src="js/array.observe.polyfill.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/push.js"></script>
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -23,9 +46,10 @@
 
     <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#607d8b">
-    
+
     <meta name="theme-color" content="#607d8b">
 </head>
+
 <body class="grey lighten-5 blue-grey-text">
     <header id="header" class="container grey lighten-4">
         <h1>myNotes</h1>
@@ -44,4 +68,5 @@
         </ul>
     </div>
 </body>
+
 </html>
