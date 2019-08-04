@@ -1,4 +1,5 @@
-let notes = {data: []};
+let notes = window.localStorage.getItem('notes') || '{"data": []}';
+notes = JSON.parse(notes);
 
 let updateList = function () {
     console.log('[Application] start watch');
@@ -41,6 +42,7 @@ let updateList = function () {
             notesTag.appendChild(newLi);
         }
         
+        window.localStorage.setItem('notes', JSON.stringify(notes));
     });
 }
 
